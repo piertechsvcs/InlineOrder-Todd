@@ -1,91 +1,217 @@
 {
-  "quotes": [
+  "questions": [
     {
-      "id": 10,
-      "zipcode": "68116",
-	"premium": 24.5,
-	"planName": "Plan A",
-	"planDescription":"Plan special AAAA",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
+    "number": 1,
+    "next": 1,
+                "prev": null,
+    "name": "Personal Info",
+                "description":"Personal Info",
+                "controls": [
+            {
+                "component":"applicant-name",
+                "version":"1.0",
+                "columns":"2"
 
+            }
+                    ]
     },
     {
-      "id": 20,
-      "zipcode": "68116",
-	"premium": 33.5,
-	"planName": "Plan B",
-	"planDescription":"Plan special BBBB",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
-
+    "number": 2,
+    "next": 2,
+                "prev": 1,
+    "name": "Residence",
+                "description":"Residence",
+                "controls": [
+            {
+                "component":"domestic-address",
+                "version":"1.0",
+                "columns":"3"
+            }
+                    ]
     },
     {
-      "id": 30,
-      "zipcode": "68116",
-	"premium": 14.5,
-	"planName": "Plan F",
-	"planDescription":"Plan special FFFFF",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
-
-    },
-    {
-      "id": 35,
-      "zipcode": "68116",
-	"premium": 44.5,
-	"planName": "Plan D",
-	"planDescription":"Plan special DDDDD",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
-
-    },
-    {
-      "id": 45,
-      "zipcode": "68136",
-	"premium": 14.5,
-	"planName": "Plan A",
-	"planDescription":"Plan special AAAA",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
-
-    },
-    {
-	"id": 55,
-      "zipcode": "68136",
-	"premium": 34.5,
-	"planName": "Plan B",
-	"planDescription":"Plan special BBB",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
-
-    },
-{
-	"id": 65,
-      "zipcode": "68136",
-	"premium": 54.5,
-	"planName": "Plan C",
-	"planDescription":"Plan special CCC",
-	"benefits": [
-		{"benefit1":""},
-		{"benefit2":""}
-	]
-
+    "number": 3,
+    "next": null,
+                "prev": 2,
+    "name": "Replacement",
+                "description":"Replacement",
+                "controls": [
+            {
+                "component":"replacement",
+                "version":"1.0",
+                "columns":"1"
+            }
+                    ]
     }
+  ],
+  "controlModels": [
+    { 
+    "name":"applicant-name", 
+    "controls":[
+        {   
+        "inputType":"text",
+        "label":"First Name",
+        "regex":"",
+        "required":true,
+        "name":"firstName",
+        "Key":"UWQ_Applicant_First_Name",
+        "text":"",
+        "placeHolder":"First Name",
+        "classStyles":"control-full-width",
+        "options" : ""
+        },
+        {   
+        "inputType":"text",
+        "label":"Middle Name",
+        "regex":"",
+        "required":false,
+        "name":"middleName",
+        "Key":"UWQ_Applicant_Middle_Name",
+        "text":"",
+        "placeHolder":"Middle Name",
+        "classStyles":"control-sm-width",
+        "options" : "",
+        "maxlength" : "1"
+        },
+        {   
+        "inputType":"text",
+        "label":"Last Name",
+        "regex":"",
+        "required":true,
+        "name":"lastName",
+        "Key":"UWQ_Applicant_Last_Name",
+        "text":"",
+        "placeHolder":"Last Name",
+        "classStyles":"control-full-width",
+        "options" : ""
+        },
+      {   
+        "inputType":"number",
+        "label":"Age",
+        "regex":"",
+        "required": true,
+        "name":"age",
+        "Key":"UWQ_Applicant_Age",
+        "text":"",
+        "placeHolder":"Age",
+        "classStyles":"control-med-width",
+        "max":"100",
+        "options" : "",
+        "maxlength" : "3"
+        },
+      {   
+        "inputType":"email",
+        "label":"Email",
+        "regex":"",
+        "required": true,
+        "name":"email",
+        "Key":"UWQ_Applicant_Email",
+        "text":"",
+        "placeHolder":"Email",
+        "classStyles":"control-med-width",
+        "max":"",
+        "options" : "",
+        "maxlength" : ""
+        },
+       {   
+        "inputType":"alertbox",
+        "label":"",
+        "regex":"",
+        "required": false,
+        "name":"alertBoxAge",
+        "showCondition" : " age > 65",
+        "Key":"",
+        "text":"An additional 10% for 65 and older, if submitted in Nebraska",
+        "placeHolder":"Age",
+        "classStyles":"",
+        "options" : ""
+        }
+        ],
+      "layout" : "<input type=\"text\" name=\"firstName\"> <input type=\"text\" name=\"lastName\">"
+    },
+    { "name": "domestic-address",
+     "controls":[ 
+      {   
+        "inputType":"text",
+        "label":"Address",
+        "regex":"^\\d+\\s[A-z]+\\s[A-z]+",
+        "required":true,
+        "name":"address",
+        "Key":"UWQ_Applicant_Residence_Address",
+        "text":"",
+        "placeHolder":"Address",
+        "classStyles":""
+      },
+      {   
+        "inputType":"text",
+        "label":"Address 2",
+        "regex":"",
+        "required":false,
+        "name":"address2",
+        "Key":"UWQ_Applicant_Residence_Address2",
+        "text":"",
+        "placeHolder":"Address2",
+        "classStyles":""
+      },
+      {   
+        "inputType":"text",
+        "label":"city",
+        "regex":"",
+        "required":true,
+        "name":"city",
+        "Key":"UWQ_Applicant_Residence_City",
+        "text":"",
+        "placeHolder":"City",
+        "classStyles":""
+      },
+      {   
+        "inputType":"text",
+        "label":"state",
+        "regex":"",
+        "required":true,
+        "name":"state",
+        "Key":"UWQ_Applicant_Residence_State",
+        "text":"",
+        "validator":"isOnList",
+        "validList":"NE,SD,IA,CO,IL",
+        "placeHolder":"State",
+        "classStyles":"",
+        "maxlength" : "2",
+        "hint" : "NE"
+      },
+      {   
+        "inputType":"text",
+        "label":"Zipcode",
+        "regex":"",
+        "required":true,
+        "name":"zipcode",
+        "Key":"UWQ_Applicant_Residence_Zipcode",
+        "text":"",
+        "placeHolder":"Zipcode",
+        "classStyles":""
+      }
+    ],
+     "layout" : "<input type=\"text\" name=\"address\"> <input type=\"text\" name=\"address2\">"
+   },
+    { "name": "replacement",
+     "controls":[ 
+      {   
+        "inputType":"text",
+        "label":"Replacement Name",
+        "regex":"",
+        "required":true,
+        "name":"replacementName",
+        "Key":"UWQ_Applicant_Replacement",
+        "text":"",
+        "placeHolder":"Replacement Name",
+        "classStyles":""
+      }
+    ],
+     "layout" : "<input type=\"text\" name=\"replacementName\">"
+   }
   ],
   "profile": {
     "name": "typicode"
   }
 }
+
