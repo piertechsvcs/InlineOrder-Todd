@@ -121,7 +121,7 @@
         "regex":"",
         "required": false,
         "name":"alertBoxAge",
-        "showCondition" : " age > 65",
+        "showCondition" : "this.age > 65",
         "Key":"",
         "text":"An additional 10% for 65 and older, if submitted in Nebraska",
         "placeHolder":"Age",
