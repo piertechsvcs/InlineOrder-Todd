@@ -100,7 +100,8 @@
         "min":"0",
         "options" : "",
         "maxlength" : "3",
-        "id":"age"
+        "id":"age",
+        "onChange" : ["alertBoxAge"]
         },
       {   
         "inputType":"email",
@@ -114,8 +115,7 @@
         "classStyles":"control-med-width",
         "max":"",
         "options" : "",
-        "maxlength" : "",
-        "onChange" : ["alertBoxAge"]
+        "maxlength" : ""
         },
        {   
         "inputType":"alertbox",
