@@ -128,7 +128,8 @@
         "text":"An additional 10% for 65 and older, if submitted in Nebraska",
         "placeHolder":"Age",
         "classStyles":"",
-        "options" : ""
+        "options" : "",
+        "id" : "alertBoxAge"
         }
         ],
       "layout" : "<input type=\"text\" name=\"firstName\"> <input type=\"text\" name=\"lastName\">"
