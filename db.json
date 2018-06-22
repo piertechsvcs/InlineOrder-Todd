@@ -114,7 +114,8 @@
         "classStyles":"control-med-width",
         "max":"",
         "options" : "",
-        "maxlength" : ""
+        "maxlength" : "",
+        "onChange" : ["alertBoxAge"]
         },
        {   
         "inputType":"alertbox",
